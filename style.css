@@ -1,0 +1,28 @@
+body {
+    background-color: azure;
+}
+
+#BotaoP{
+    height: 70px;
+    width: 70px;
+}
+
+#BotaoP {
+    background: #5eff00;
+    border: none;
+    
+}
+
+#BotaoP:hover {
+    opacity: 75%;
+    cursor: pointer;
+}
+
+#BotaoP:active {
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+
+#BotaoP.vermelho {
+    background: red;
+}
