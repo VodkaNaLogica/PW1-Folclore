@@ -1,28 +1,48 @@
 body {
-    background-color: azure;
+	background-color: white;
 }
 
-#BotaoP{
-    height: 70px;
-    width: 70px;
+.div-pai {
+	margin-top: 50px;
+	position: relative;
+	display: inline-block;
+	height: 70px;
+	width: 70px;
+	gap: 100;
+}
+
+.quadrado {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #4ed400;
+	z-index: 1;
+
+	transition: transform 0.3s ease;
 }
 
 #BotaoP {
-    background: #5eff00;
-    border: none;
-    
+	position: relative;
+	padding: 10px 20px;
+	background: #53e200;
+	border: none;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	/*transform: translateX(10px);*/
+
+	transition: transform 0.09s ease;
 }
 
-#BotaoP:hover {
-    opacity: 75%;
-    cursor: pointer;
+.div-pai:hover #BotaoP {
+	background: #5eff00;
+	cursor: pointer;
+	transform: translate(0px, -20px);
 }
 
-#BotaoP:active {
-    transform: scale(0.95);
-    filter: brightness(0.8);
-}
-
-#BotaoP.vermelho {
-    background: red;
+.div-pai:active #BotaoP {
+	background: #5eff00;
+	transform: translate(0px, -5px);
 }
