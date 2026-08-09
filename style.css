@@ -1,48 +1,66 @@
-body {
-	background-color: white;
-}
-
 .div-pai {
 	margin-top: 50px;
+	margin-left: 50px;
 	position: relative;
 	display: inline-block;
-	height: 70px;
-	width: 70px;
-	gap: 100;
+	height: 400px;
+	width: 400px;
 }
 
-.quadrado {
+/* 1. ESTILIZA O BOTÃO: Ele precisa ser absoluto e ter o z-index alto */
+.div-pai button {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: #4ed400;
-	z-index: 1;
-
-	transition: transform 0.3s ease;
+	background: none;
+	border: none;
+	padding: 0;
+	z-index: 4; /* Garante que o botão inteiro fique por cima */
+	cursor: pointer;
 }
 
-#BotaoP {
-	position: relative;
-	padding: 10px 20px;
-	background: #53e200;
-	border: none;
+/* 2. ESTILIZA AS IMAGENS: Todas absolutas ocupando 100% do pai */
+.div-pai img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 2;
-	/*transform: translateX(10px);*/
+	object-fit: cover; /* Garante que preencham o espaço sem distorcer */
+}
 
+/* 3. REGRAS ESPECÍFICAS DE CADA CAMADA */
+#top {
+	/* O z-index do #top acompanha o do botão pai */
 	transition: transform 0.09s ease;
 }
 
-.div-pai:hover #BotaoP {
-	background: #5eff00;
-	cursor: pointer;
-	transform: translate(0px, -20px);
+/* O hover e active agora escutam o botão */
+.div-pai button:hover #top {
+	transform: translate(0px, -30px);
 }
 
-.div-pai:active #BotaoP {
-	background: #5eff00;
-	transform: translate(0px, -5px);
+.div-pai button:active #top {
+	transform: translate(0px, -10px);
+}
+
+#esquerdo {
+	z-index: 3;
+	object-position: 0px -29px;
+}
+
+#direito {
+	z-index: 2;
+	object-position: 0px -28px;
+	transform-origin: center bottom;
+	background-color: black;
+	transform: scaleY(100%);
+}
+
+#bottom {
+	z-index: 1;
+	object-position: 0px -27px;
+	transition: transform 0.3s ease;
 }
