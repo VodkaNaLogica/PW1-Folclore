@@ -49,14 +49,15 @@
 #esquerdo {
 	z-index: 3;
 	object-position: 0px -29px;
+	transform: scaleY(0%);
 }
 
 #direito {
 	z-index: 2;
 	object-position: 0px -28px;
 	transform-origin: center bottom;
-	background-color: black;
-	transform: scaleY(100%);
+	
+	transform: scaleY(0%);
 }
 
 #bottom {
