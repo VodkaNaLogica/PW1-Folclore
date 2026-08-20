@@ -7,7 +7,6 @@
 	width: 400px;
 }
 
-/* 1. ESTILIZA O BOTÃO: Ele precisa ser absoluto e ter o z-index alto */
 .div-pai button {
 	position: absolute;
 	top: 0;
@@ -17,27 +16,23 @@
 	background: none;
 	border: none;
 	padding: 0;
-	z-index: 4; /* Garante que o botão inteiro fique por cima */
+	z-index: 4;
 	cursor: pointer;
 }
 
-/* 2. ESTILIZA AS IMAGENS: Todas absolutas ocupando 100% do pai */
 .div-pai img {
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	object-fit: cover; /* Garante que preencham o espaço sem distorcer */
+	object-fit: cover;
 }
 
-/* 3. REGRAS ESPECÍFICAS DE CADA CAMADA */
 #top {
-	/* O z-index do #top acompanha o do botão pai */
 	transition: transform 0.09s ease;
 }
 
-/* O hover e active agora escutam o botão */
 .div-pai button:hover #top {
 	transform: translate(0px, -30px);
 }
@@ -49,15 +44,13 @@
 #esquerdo {
 	z-index: 3;
 	object-position: 0px -29px;
-	transform: scaleY(0%);
+	transform-origin: center bottom;
 }
 
 #direito {
 	z-index: 2;
 	object-position: 0px -28px;
 	transform-origin: center bottom;
-	
-	transform: scaleY(0%);
 }
 
 #bottom {
