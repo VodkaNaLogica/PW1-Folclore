@@ -16,10 +16,53 @@
     transform: perspective(700px) rotateX(49deg) rotateY(0deg) rotateZ(0deg) scale(0.8);
 }
 
+/*********************************************************/
+
 #g28356:hover {
     transform: translate(-20px, -55px);
 }
 
 #g28356:active {
+    transform: translate(-20px, -35px);
+}
+/*********************************************************/
+
+#g27744:hover {
+    transform: translate(-20px, -55px);
+}
+
+#g27744:active {
     transform: translate(-20px, -30px);
 }
+
+/*********************************************************/
+
+#g27790:hover {
+    transform: translate(-20px, -55px);
+}
+
+#g27790:active {
+    transform: translate(-20px, -30px);
+}
+
+/*********************************************************/
+
+#g27734:hover {
+    transform: translate(-20px, -55px);
+}
+
+#g27734:active {
+    transform: translate(-20px, -30px);
+}
+
+/*********************************************************/
+
+#g27714:hover {
+    transform: translate(-20px, -20px);
+}
+
+#g27714:active {
+    transform: translate(-5px, -9px);
+}
+
+/*********************************************************/
