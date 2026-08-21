@@ -63,7 +63,6 @@
 .div-pai2 {
 	position: relative;
 	display: inline-block;
-	background: red;
 }
 
 .div-pai2 svg {
@@ -81,13 +80,13 @@
 #svg1 {
 	position: absolute;
 	transform: perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg);
-	transition: transform 0.04s ease;
+	transition: transform 0.07s ease;
 	z-index: 2;
 }
 
 #svg2 {
 	position: absolute;
 	transform: perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg);
-	transition: transform 0.04s ease;
+	transition: transform 0.07s ease;
 	z-index: 1;
 }
