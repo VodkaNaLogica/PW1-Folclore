@@ -1,50 +1,87 @@
-const topImg = document.getElementById('top');
-const bottomImg = document.getElementById('bottom');
-const direito = document.getElementById('direito');
-const esquerdo = document.getElementById('esquerdo');
+const gSE = document.getElementById("g28356");
+const pathS = document.querySelectorAll(".pathS");
+const pathSE = document.querySelectorAll(".pathSE")
+const pathNE = document.querySelectorAll(".pathNE")
+const pathCO = document.querySelectorAll(".pathCO")
+const pathN = document.querySelectorAll(".pathN")
 
-const svgButton = document.getElementById("svg1")
-const svgPathA = document.querySelectorAll(".PathA")
+const hover = "blue"
+const colorBase = 'green'
 
-const g1 = document.getElementById("g1")
-const g = document.getElementById("g")
+document.documentElement.style.setProperty('--colorBase', colorBase)
 
-function monitorarDistancia() {
+pathS.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        pathS.forEach(outro => {
+            outro.style.fill = `${hover}`;
+        });
+	});
 
-	const rectTop = g.getBoundingClientRect();
-	const rectBottom = g1.getBoundingClientRect();
+    el.addEventListener("mouseleave", () => {
+        pathS.forEach(outro => {
+            outro.style.fill = `${colorBase}`;
+        });
+	});
+});
 
-	const distancia = rectBottom.top - rectTop.bottom;
-	const escalax = (distancia + 124.43) / 25
+pathSE.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        pathSE.forEach(outro => {
+            outro.style.fill = `${hover}`;
+        });
+	});
 
-	console.log(`Escala Y: ${escalax.toFixed(2)}`);
+    el.addEventListener("mouseleave", () => {
+        pathSE.forEach(outro => {
+            outro.style.fill = `${colorBase}`;
+        });
+	});
 
-	esquerdo.style.transform = `scaleY(${escalax})`
-	direito.style.transform = `scaleY(${escalax})`;
+    el.addEventListener("mouseup", () => {
+        setTimeout(() => {
+		    window.location.href = "regioes/sudeste/indexSE.html";
+		}, 300)
+    })
+});
 
-	requestAnimationFrame(monitorarDistancia);
-}
-requestAnimationFrame(monitorarDistancia);
+pathNE.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        pathNE.forEach(outro => {
+            outro.style.fill = `${hover}`;
+        });
+	});
 
-svgPathA.forEach(svgPathA => {
-	svgPathA.addEventListener("mousedown", () => {
-			svgButton.style.transform = `perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg) translate(0px, -10px)`;
-			//setTimeout(() => {
-			//	window.location.href = "regioes/sudeste/indexSE.html";
-			//}, 300)
-	})
+    el.addEventListener("mouseleave", () => {
+        pathNE.forEach(outro => {
+            outro.style.fill = `${colorBase}`;
+        });
+	});
+});
 
-	svgPathA.addEventListener("mouseup",  () => {
-		svgButton.style.transform = `perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg) translate(0px, -30px)`;
-	})
+pathCO.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        pathCO.forEach(outro => {
+            outro.style.fill = `${hover}`;
+        });
+	});
 
-	svgPathA.addEventListener("mouseenter", () => {
-			svgButton.style.transform = `perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg) translate(0px, -30px)`;
+    el.addEventListener("mouseleave", () => {
+        pathCO.forEach(outro => {
+            outro.style.fill = `${colorBase}`;
+        });
+	});
+});
 
-	})
+pathN.forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        pathN.forEach(outro => {
+            outro.style.fill = `${hover}`;
+        });
+	});
 
-	svgPathA.addEventListener("mouseleave",  () => {
-		svgButton.style.transform = `perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg) translate(0px, 0px)`;
-	})
-})
-
+    el.addEventListener("mouseleave", () => {
+        pathN.forEach(outro => {
+            outro.style.fill = `${colorBase}`;
+        });
+	});
+});

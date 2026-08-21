@@ -1,92 +1,12 @@
-.div-pai {
-	margin-top: 50px;
-	margin-left: 50px;
-	position: relative;
+.Mapa {
+    position: relative;
 	display: inline-block;
-	height: 400px;
-	width: 400px;
+    transform: perspective(700px) rotateX(49deg) rotateY(0deg) rotateZ(0deg) scale(0.8);
+    background: none;
+    border: none;
 }
 
-.div-pai button {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: none;
-	border: none;
-	padding: 0;
-	z-index: 4;
-	cursor: pointer;
-}
-
-.div-pai img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-
-#top {
-	transition: transform 0.09s ease;
-}
-
-.div-pai button:hover #top {
-	transform: translate(0px, -30px);
-}
-
-.div-pai button:active #top {
-	transform: translate(0px, -10px);
-}
-
-#esquerdo {
-	z-index: 3;
-	object-position: 0px -29px;
-	transform-origin: center bottom;
-}
-
-#direito {
-	z-index: 2;
-	object-position: 0px -28px;
-	transform-origin: center bottom;
-}
-
-#bottom {
-	z-index: 1;
-	object-position: 0px -27px;
-	transition: transform 0.3s ease;
-}
-/*//////////////////////////////////////////////////////////////////////*/
-
-.div-pai2 {
-	position: relative;
-	display: inline-block;
-}
-
-.div-pai2 svg {
-	transform: perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg);
-}
-
-#pathA {
-	fill: purple;
-}
-
-#pathB {
-	fill: aqua;
-}
-
-#svg1 {
-	position: absolute;
-	transform: perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg);
-	transition: transform 0.07s ease;
-	z-index: 2;
-}
-
-#svg2 {
-	position: absolute;
-	transform: perspective(600px) rotateX(44deg) rotateY(0deg) rotateZ(0deg);
-	transition: transform 0.07s ease;
-	z-index: 1;
+.Mapa path {
+    fill: var(--colorBase);
+    cursor: pointer;
 }
