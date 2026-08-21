@@ -10,10 +10,15 @@ const colorBase = 'green'
 
 document.documentElement.style.setProperty('--colorBase', colorBase)
 
+function clicou() {
+    console.log("Clicou")
+}
+
 pathS.forEach(el => {
     el.addEventListener("mouseenter", () => {
         pathS.forEach(outro => {
             outro.style.fill = `${hover}`;
+            //gSE.parentNode.appendChild(gSE);
         });
 	});
 

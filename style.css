@@ -1,12 +1,25 @@
 .Mapa {
     position: relative;
 	display: inline-block;
-    transform: perspective(700px) rotateX(49deg) rotateY(0deg) rotateZ(0deg) scale(0.8);
     background: none;
     border: none;
+    z-index: 1;
 }
 
 .Mapa path {
     fill: var(--colorBase);
     cursor: pointer;
+}
+
+.Mapa svg {
+    position: absolute;
+    transform: perspective(700px) rotateX(49deg) rotateY(0deg) rotateZ(0deg) scale(0.8);
+}
+
+#g28356:hover {
+    transform: translate(-20px, -55px);
+}
+
+#g28356:active {
+    transform: translate(-20px, -30px);
 }
