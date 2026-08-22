@@ -1,4 +1,9 @@
-const gSE = document.getElementById("g28356");
+const gN = document.getElementById("g25912")
+const gCO = document.getElementById("g27744")
+const gNE = document.getElementById("g27790")
+const gSE = document.getElementById("g27734")
+const gS = document.getElementById("g28356")
+
 const pathS = document.querySelectorAll(".pathS");
 const pathSE = document.querySelectorAll(".pathSE")
 const pathNE = document.querySelectorAll(".pathNE")
@@ -10,15 +15,32 @@ const colorBase = 'green'
 
 document.documentElement.style.setProperty('--colorBase', colorBase)
 
-function clicou() {
-    console.log("Clicou")
-}
+function 
+
+gN.addEventListener("mouseenter", () => {
+    gN.parentNode.appendChild(gN)
+})
+
+gCO.addEventListener("mouseenter", () => {
+    gCO.parentNode.appendChild(gCO)
+})
+
+gNE.addEventListener("mouseenter", () => {
+    gNE.parentNode.appendChild(gNE)
+})
+
+gSE.addEventListener("mouseenter", () => {
+    gSE.parentNode.appendChild(gSE)
+})
+
+gS.addEventListener("mouseenter", () => {
+    gS.parentNode.appendChild(gS)
+})
 
 pathS.forEach(el => {
     el.addEventListener("mouseenter", () => {
         pathS.forEach(outro => {
             outro.style.fill = `${hover}`;
-            //gSE.parentNode.appendChild(gSE);
         });
 	});
 
