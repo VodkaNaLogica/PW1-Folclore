@@ -10,12 +10,40 @@ const pathNE = document.querySelectorAll(".pathNE")
 const pathCO = document.querySelectorAll(".pathCO")
 const pathN = document.querySelectorAll(".pathN")
 
-const hover = "blue"
-const colorBase = 'green'
+const hover = "red"
+const colorBase = 'rgb(0, 83, 190)'
 
 document.documentElement.style.setProperty('--colorBase', colorBase)
 
-function 
+function sul() {
+    setTimeout(() => {
+		    window.location.href = "regioes/sul/indexS.html";
+		}, 50)
+}
+
+function suldeste() {
+    setTimeout(() => {
+		    window.location.href = "regioes/sudeste/indexSE.html";
+		}, 50)
+}
+
+function centroOeste() {
+    setTimeout(() => {
+		    window.location.href = "regioes/centro-oeste/indexCO.html";
+		}, 50)
+}
+
+function nordeste() {
+    setTimeout(() => {
+		    window.location.href = "regioes/nordeste/indexNE.html";
+		}, 50)
+}
+
+function norte() {
+    setTimeout(() => {
+		    window.location.href = "regioes/norte/indexN.html";
+		}, 50)
+}
 
 gN.addEventListener("mouseenter", () => {
     gN.parentNode.appendChild(gN)
@@ -64,11 +92,6 @@ pathSE.forEach(el => {
         });
 	});
 
-    el.addEventListener("mouseup", () => {
-        setTimeout(() => {
-		    window.location.href = "regioes/sudeste/indexSE.html";
-		}, 300)
-    })
 });
 
 pathNE.forEach(el => {
